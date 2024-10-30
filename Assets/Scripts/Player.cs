@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        Vector2 delta = rawInput * moveSpeed * Time.deltaTime;
-        Vector2 newPos = new Vector2();
+        Vector2 delta = moveSpeed * Time.deltaTime * rawInput;
+        Vector2 newPos = new();
         newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxBounds.x - paddingRight);
         newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + paddingBot, maxBounds.y - paddingTop);
         transform.position = newPos;

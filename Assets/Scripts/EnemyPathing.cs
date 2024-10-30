@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
-    [SerializeField] WaveConfig waveConfig;
+    WaveConfig waveConfig;
     List<Transform> waypts;
     int wayptIndex = 0;
+    EnemySpawner enemySpawner;
+    void Awake()
+    {
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+    }
     void Start()
     {
+        waveConfig = enemySpawner.GetCurrentWave();
         waypts = waveConfig.GetWaypts();
         transform.position = waypts[wayptIndex].position;        
     }
@@ -27,6 +33,10 @@ public class EnemyPathing : MonoBehaviour
             {
                 wayptIndex++;
             }
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4637904457733060500}
   - component: {fileID: 3493497441257116626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyGreen1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6431e9b4b760dd3489e9efb7cf182d46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -8286278645173821808}
   - component: {fileID: 3350572341230137204}
   - component: {fileID: -1468014843734035880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemy_evasive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8338606948428812211}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

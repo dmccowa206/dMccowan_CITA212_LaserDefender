@@ -39,7 +39,7 @@ public class WaveConfig : ScriptableObject
     }
     public float GetRandomSpawnTime()
     {
-        float spawnTime = Random.Range(timeBetweenSpawn - spawnTimeVariance, timeBetweenSpawn  + spawnTimeVariance);
+        float spawnTime = Random.Range(timeBetweenSpawn - spawnTimeVariance, timeBetweenSpawn + spawnTimeVariance);
         return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
     }
 }

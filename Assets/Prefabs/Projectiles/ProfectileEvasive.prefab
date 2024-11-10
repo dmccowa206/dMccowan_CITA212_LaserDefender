@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558266209214786385}
   - component: {fileID: 4806682007896173637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laserRed10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 661447367401395210}
   - component: {fileID: -3247235795978028267}
   - component: {fileID: 4162976548450415219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProfectileEvasive
   m_TagString: Untagged
   m_Icon: {fileID: 0}

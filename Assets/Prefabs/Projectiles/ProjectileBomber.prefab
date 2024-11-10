@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5356882345758811455}
   - component: {fileID: 3309403066018260424}
   - component: {fileID: -8805519055514353624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileBomber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6056692057902292213}
   - component: {fileID: 6213427429398701993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laserRed08
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: -2785708397945195963}
   - component: {fileID: 3722942648051449156}
   - component: {fileID: 7922459067431196265}
+  - component: {fileID: 5598038724014535822}
   m_Layer: 7
   m_Name: enemy_bomber
   m_TagString: Untagged
@@ -113,14 +114,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5832829637010571388}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7892445361936279795}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &-5932956312680525213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,4 +222,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fc5b5a1a2bdd845bdd27de8f8eb848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
+--- !u!114 &5598038724014535822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5832829637010571388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e715b3be14b5e4c8f068a297d316ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 488656799684851274, guid: 9d8c6bf0b3f446c4e940f3c799e4cbf3, type: 3}
+  projectileSpd: 4
+  projectileLifetime: 5
+  baseFireRate: 1
+  useAI: 1
+  minFireRate: 0.7
+  isFiring: 0

@@ -238,7 +238,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 778950940284098102, guid: 63d4f568a00f67840b29cd9e564a7f80, type: 3}
   projectileSpd: 8
   projectileLifetime: 5
-  baseFireRate: 1
+  baseFireRate: 1.1
   useAI: 1
   minFireRate: 0.8
   isFiring: 0

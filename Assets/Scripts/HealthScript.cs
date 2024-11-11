@@ -9,9 +9,11 @@ public class HealthScript : MonoBehaviour
     [SerializeField] ParticleSystem hitFX;
     CameraShake camShake;
     [SerializeField] bool applyCamShake;
+    AudioPlayer audioPlayer;
     void Awake()
     {
         camShake = Camera.main.GetComponent<CameraShake>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -21,6 +23,7 @@ public class HealthScript : MonoBehaviour
         {
             TakeDamage(damageDealer.GetDamage());
             PlayHitFX();
+            audioPlayer.PlayDamageClip();
             ShakeCam();
             damageDealer.Hit();
         }

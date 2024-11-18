@@ -1,19 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
+    [SerializeField] bool isPlayer;
     [SerializeField] int hp = 50;
+    [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitFX;
     CameraShake camShake;
     [SerializeField] bool applyCamShake;
     AudioPlayer audioPlayer;
+    Scorekeeper scoreKeep;
+    public int GetHealth()
+    {
+        return hp;
+    }
     void Awake()
     {
         camShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        scoreKeep = FindObjectOfType<Scorekeeper>();
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +40,7 @@ public class HealthScript : MonoBehaviour
         hp -= dam;
         if(hp <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
     void PlayHitFX()
@@ -50,5 +57,14 @@ public class HealthScript : MonoBehaviour
         {
             camShake.Play();
         }
+    }
+    void Die()
+    {
+        if (!isPlayer)
+        {
+            scoreKeep.ChangeScore(score);
+        }
+        Destroy(gameObject);
+        
     }
 }

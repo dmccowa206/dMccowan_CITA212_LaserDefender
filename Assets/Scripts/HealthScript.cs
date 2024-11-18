@@ -12,6 +12,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] bool applyCamShake;
     AudioPlayer audioPlayer;
     Scorekeeper scoreKeep;
+    LevelManager lvlManager;
     public int GetHealth()
     {
         return hp;
@@ -21,6 +22,7 @@ public class HealthScript : MonoBehaviour
         camShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeep = FindObjectOfType<Scorekeeper>();
+        lvlManager = FindObjectOfType<LevelManager>();
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -63,6 +65,10 @@ public class HealthScript : MonoBehaviour
         if (!isPlayer)
         {
             scoreKeep.ChangeScore(score);
+        }
+        else
+        {
+            lvlManager.LoadGameOver();
         }
         Destroy(gameObject);
         

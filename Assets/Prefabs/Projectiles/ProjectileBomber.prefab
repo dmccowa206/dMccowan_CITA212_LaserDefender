@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5356882345758811455}
   - component: {fileID: 3309403066018260424}
   - component: {fileID: -8805519055514353624}
+  - component: {fileID: -2479344033092699755}
   m_Layer: 7
   m_Name: ProjectileBomber
   m_TagString: Untagged
@@ -96,6 +97,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.23676398
+--- !u!114 &-2479344033092699755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488656799684851274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fc5b5a1a2bdd845bdd27de8f8eb848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
 --- !u!1 &5547146715215936127
 GameObject:
   m_ObjectHideFlags: 0
